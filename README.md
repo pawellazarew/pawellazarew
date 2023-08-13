@@ -1,0 +1,5 @@
+- 👋 Hi, I’m @pawellazarew
+- 👀 I’m interested in Swift, AV, Music and Parfums
+- 🌱 I’m currently learning how to make a website in Swift.
+- 💞️ I’m looking to collaborate on projects with AVFoundation, Metal, CoreML; using VisionOS and other projects. 
+- 📫 How to reach me: pawellazarew@gmail.com or t.me/pavellazarev_ios_developer
