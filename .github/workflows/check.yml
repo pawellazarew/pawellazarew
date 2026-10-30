@@ -1,0 +1,22 @@
+name: Profile
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check banner and profile links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          text = Path('README.md').read_text()
+          assert 'assets/workshop.svg' in text
+          ET.parse('assets/workshop.svg')
+          for project in ('pult', 'gamedev-forge'):
+              assert f'https://github.com/pawellazarew/{project}' in text
+          assert 'https://pawellazarew.github.io/' in text
+          print('Profile banner and links OK')
+          PY
